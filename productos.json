@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Cuaderno Cherhane Funcional A5",
+        "price": "1050",
+        "stock":"10",
+        "img": "elementos/imagenes/card/cuaderno.jpg"
+    },
+    {
+        "title": "Organizador FW Serie Fun Shine",
+        "price": "1355",
+        "stock":"6",
+        "img": "elementos/imagenes/card/fw.jpg"
+    },
+    {
+        "title": "Resaltador Stabilo Swing Cool Pastel X6",
+        "price": "955",
+        "stock":"8",
+        "img": "elementos/imagenes/card/stabilo-resaltadoe.gif"
+    }
+]

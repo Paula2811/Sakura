@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Css - Estilos-->
+    <link rel="stylesheet" href="elementos/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700;900&display=swap" rel="stylesheet">
+    <!--JavaScript-->
+    <script src="js/main.js" defer></script>
+    <title>Sakura Libreria</title>
+
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navbar__container" id="navbarToggleExternalContent">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="elementos/imagenes/logo4.png" alt="Logo" width="30" height="24"
+                                class="d-inline-block align-text-top imagenLogo">
+                            Sakura Libreria
+                        </a>
+                    </div>
+                    <div id="navbar" class="navbar-nav navbar__lista">
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <!--Carrusel-->
+        <div class="carrusel">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="elementos/imagenes/carrusel/stabilo.jpg" class="d-block w-100 " alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="elementos/imagenes/carrusel/stabilo2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="elementos/imagenes/carrusel/fw.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!--Card de los productos-->
+        <section class="productos">
+            <h2>Productos</h2>
+            <article class="productos__items" id="productos">
+
+            </article>
+        </section>
+        <!--Seccion Contacto-->
+        <section class="contacto">
+            <h2>Contacto</h2>
+            <!--Formulario-->
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleCheck1" class="form-label">Mensaje</label>
+                    <textarea class="form-control" aria-label="With textarea" id="mensaje"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" id="botonFormulario">Enviar</button>
+            </form>
+            <div class="alert alert-success container hide alert4" role="alert">
+                Enviado con exito
+            </div>
+        </section>
+        <!--Seccion Carrito-->
+        <section class="carrito">
+            <h2>Carrito</h2>
+            <!--Productos seleccionados por el usuario con su información-->
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    
+                </tbody>
+            </table>
+            <div class="row mx-4">
+                <div class="col total">
+                    <h3 class="itemCantTotal">Total: 0</h3>
+                    <div class="col d-flex justify-content-end">
+                        <button class="btn btn-success btnComprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+            <!--Alertas cuando se modifica el carrito-->
+            <div class="alert alert-success container hide alert1" role="alert">
+                Producto Añadido al carrito
+            </div>
+            <div class="alert alert-danger container hide alert2" role="alert">
+                Producto removido del carrito
+            </div>
+            <div class="alert alert-success container hide alert3" role="alert">
+                Gracias por su compra!
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__container">
+            <div class="mediosdepago">
+                <p>Medios de pago</p>
+                <img src="elementos/imagenes/footer-mediosdepago.png" alt="Medios de pago">
+            </div>
+            <div class="redes">
+                <p>Redes</p>
+                <a href="https://www.instagram.com/chemistrystudy28/?hl=es-la" target=”_blank”
+                    class="redes__enlace">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap 5.0.2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</body>
+
+</html>
